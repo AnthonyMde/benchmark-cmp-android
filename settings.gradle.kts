@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "cmp-android"
 include(":app")
+include(":shared")
+project(":shared").projectDir = File(rootDir, "shared/shared")
