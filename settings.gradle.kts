@@ -23,5 +23,7 @@ rootProject.name = "cmp-android"
 include(":app")
 include(":umbrella")
 include(":umbrella:data")
+include(":umbrella:analytics")
 project(":umbrella").projectDir = File(rootDir, "shared/umbrella")
 project(":umbrella:data").projectDir = File(rootDir, "shared/umbrella/data")
+project(":umbrella:analytics").projectDir = File(rootDir, "shared/umbrella/analytics")

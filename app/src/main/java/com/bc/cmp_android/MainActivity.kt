@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.bc.cmp_android.ui.theme.CmpandroidTheme
+import com.bc.cmp_shared.Greeting
 import com.bc.cmp_shared.getPlatform
 import com.bc.cmp_shared.getUserPremiumStatus
 
@@ -24,7 +25,8 @@ class MainActivity : ComponentActivity() {
             CmpandroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android ${getPlatform().name} \n with ${getUserPremiumStatus()}",
+                        name = "${Greeting().greet()}",
+//                        name = "Android ${getPlatform().name} \n with ${getUserPremiumStatus()}",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
