@@ -21,5 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "cmp-android"
 include(":app")
-include(":shared")
-project(":shared").projectDir = File(rootDir, "shared/shared")
+include(":umbrella")
+include(":umbrella:data")
+project(":umbrella").projectDir = File(rootDir, "shared/umbrella")
+project(":umbrella:data").projectDir = File(rootDir, "shared/umbrella/data")
